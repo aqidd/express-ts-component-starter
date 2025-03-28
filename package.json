@@ -1,0 +1,60 @@
+{
+  "name": "express-ts-component-starter",
+  "version": "1.0.0",
+  "description": "An Express starter project with component-based architecture using TypeScript",
+  "main": "dist/app/server.js",
+  "scripts": {
+    "dev": "nodemon --exec ts-node -r tsconfig-paths/register src/app/server.ts",
+    "build": "tsc",
+    "start": "node dist/app/server.js",
+    "test": "jest",
+    "lint": "standard --fix",
+    "knex": "knex --knexfile src/app/config/knexfile.ts",
+    "migrate": "npm run knex migrate:latest",
+    "seed": "npm run knex seed:run",
+    "migrate:make": "npm run knex migrate:make",
+    "seed:make": "npm run knex seed:make"
+  },
+  "keywords": [
+    "express",
+    "typescript",
+    "component",
+    "starter",
+    "sqlite",
+    "knex"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "helmet": "^7.1.0",
+    "knex": "^3.1.0",
+    "morgan": "^1.10.0",
+    "mysql2": "^3.14.0",
+    "pg": "^8.14.1",
+    "sqlite3": "^5.1.6",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/morgan": "^1.9.9",
+    "@types/node": "^20.10.5",
+    "@types/swagger-jsdoc": "^6.0.4",
+    "@types/swagger-ui-express": "^4.1.6",
+    "@types/uuid": "^10.0.0",
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.2",
+    "standard": "^17.1.0",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.3.3"
+  },
+  "packageManager": "pnpm@9.14.4+sha512.c8180b3fbe4e4bca02c94234717896b5529740a6cbadf19fa78254270403ea2f27d4e1d46a08a0f56c89b63dc8ebfd3ee53326da720273794e6200fcf0d184ab"
+}
