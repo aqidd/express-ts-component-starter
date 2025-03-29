@@ -430,6 +430,8 @@ cat > tests/api/$COMPONENT_NAME/${COMPONENT_NAME_LOWERCASE}-api.test.ts << EOF
  * - Implemented test database setup and teardown
  */
 
+import { describe, it } from "node:test"
+
 describe('${COMPONENT_NAME} API', () => {
   // TODO: Add your tests here
   
